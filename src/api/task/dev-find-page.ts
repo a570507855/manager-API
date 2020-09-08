@@ -36,7 +36,7 @@ export default class FindPageApi extends ApiBase {
     if (this.status)
       where.status = this.status;
 
-    const row = await db.query().where(where).skip(this.skip).take(this.take).toArray();
+    const row = await db.query().where(where).skip(this.skip).take(this.take).order('createOn').toArray();
     return {
       rows: row,
       total: await db.query().where(where).count(),
