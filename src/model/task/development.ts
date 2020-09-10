@@ -1,15 +1,17 @@
+import { DevState } from "../enum";
+
 export class Development {
-  public id: string;        //任务ID
+  public id: string;
 
-  public taskName: string;  //任务名称
+  public name: string;
 
-  public desc: string;      //任务描述
+  public desc: string;
 
-  public demand: string;    //功能需求
+  public demand: string;
 
-  public status: number;    //1:暂未处理,2:正在处理,3:任务完成
+  public state: DevState;
 
-  public createOn?: number;  //创建时间
+  public createOn?: number;
 
-  public completeOn?: number;//完成时间
+  public completeOn?: number;
 }
