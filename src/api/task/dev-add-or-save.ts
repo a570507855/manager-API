@@ -52,7 +52,8 @@ export default class DevAddOrSaveApi extends ApiBase {
         desc: this.desc,
         demand: this.demand,
         state: DevState.pending,
-        createOn: Math.floor(new Date().getTime() / 1000)
+        createOn: Math.floor(new Date().getTime() / 1000),
+        completeOn: 0
       });
       await db.add(entries[0]);
     }

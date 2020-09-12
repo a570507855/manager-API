@@ -47,7 +47,8 @@ export default class BugAddOrSaveApi extends ApiBase {
         desc: this.desc,
         solution: this.solution,
         state: BugState.pending,
-        createOn: Math.floor(new Date().getTime() / 1000)
+        createOn: Math.floor(new Date().getTime() / 1000),
+        completeOn: 0
       });
       await db.add(entries[0]);
     }
